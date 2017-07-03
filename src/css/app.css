@@ -1,0 +1,17 @@
+@import "normalize.css";
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1B1D1C;
+    color: #EA1821;
+    height: 100vh;
+    font-family: Avenir, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: calc(20px + (72 - 20) * (100vw - 320px) / (1920 - 320));
+}
+
+h1 {
+    text-align: center;
+}
