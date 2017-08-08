@@ -11,7 +11,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
     entry: [
-        'webpack-dev-server/client?http://localhost:8080',
+        'webpack-dev-server/client?http://localhost:8080/',
         'webpack/hot/only-dev-server',
         mainPath
     ],
@@ -22,7 +22,8 @@ var config = {
         inline: true,
         publicPath: '/',
         port: 8080,
-        historyApiFallback: true
+        historyApiFallback: true,
+        sockjsPrefix: '/'
     },
     output: {
         path: buildPath,
