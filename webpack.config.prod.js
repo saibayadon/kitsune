@@ -68,6 +68,7 @@ var config = {
         new HtmlWebpackPlugin({
             inject: true,
             template: './public/index.html',
+            filename: 'index.[chunkhash:8].html',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,

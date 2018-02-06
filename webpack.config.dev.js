@@ -8,7 +8,6 @@ const mainPath = resolve(__dirname, 'src', 'index.js');
 
 // Webpack Plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const DashboardPlugin = require('webpack-dashboard/plugin');
 
 var config = {
     entry: [
@@ -67,7 +66,6 @@ var config = {
         ]
     },
     plugins: [
-        new DashboardPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
         new webpack.DefinePlugin({
