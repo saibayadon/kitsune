@@ -9,7 +9,7 @@
 * `yarn start`
 
 ### Build for production
-* `yarn build` -> Will output a dist folder
+* `yarn build` -> Will output a build folder
 
 ### Extra optimizations:
 * You can add a `Loadable` (https://github.com/thejameskyle/react-loadable) and use Dynamic Imports for code splitting (https://github.com/airbnb/babel-plugin-dynamic-import-webpack)
