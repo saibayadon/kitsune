@@ -26,6 +26,10 @@ var config = {
         rules: [
             {
                 test: /\.css$/,
+                exclude: /\.module\.css$/,
+                use: ExtractTextPlugin.extract({fallback: 'style-loader', use: "css-loader?minimize=true&importLoaders=1!postcss-loader"})
+            }, {
+                test: /\.module\.css$/,
                 use: ExtractTextPlugin.extract({fallback: 'style-loader', use: "css-loader?minimize=true&modules=true&importLoaders=1!postcss-loader"})
             }, {
                 test: /\.js$/,

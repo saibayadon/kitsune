@@ -33,6 +33,21 @@ var config = {
         rules: [
             {
                 test: /\.css$/,
+                exclude: /\.module\.css$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                            sourceMap: true
+                        }
+                    },
+                    'postcss-loader?sourceMap'
+                ]
+            },
+            {
+                test: /\.module\.css$/,
                 use: [
                     'style-loader',
                     {
