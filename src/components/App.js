@@ -7,9 +7,7 @@ import styles from '../css/app.module.css';
 export default class App extends Component {
     render() {
         return (
-            <Router>
-                <Route render={routeProps => <div><h1 className={styles.module}> {'<React />'} </h1></div> } path="*" />
-            </Router>
+            <h1 className={styles.module}>React</h1>
         );
     }
 };

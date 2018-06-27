@@ -6,5 +6,6 @@ module.exports = {
             useBuiltIns: 'usage',
             forceAllTransforms: process.env.NODE_ENV === 'production'
         }]
-    ]
+    ],
+    plugins: ["dynamic-import-webpack", "transform-class-properties", "@babel/plugin-proposal-object-rest-spread"]
 }

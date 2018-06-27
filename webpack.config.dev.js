@@ -9,7 +9,7 @@ const mainPath = resolve(__dirname, 'src', 'index.js');
 // Webpack Plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var config = {
+const config = {
     entry: [
         'webpack-dev-server/client?http://localhost:8080/',
         'webpack/hot/only-dev-server',
@@ -27,6 +27,7 @@ var config = {
     output: {
         path: buildPath,
         filename: 'js/bundle.js',
+        chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
         publicPath: '/'
     },
     module: {
@@ -61,10 +62,10 @@ var config = {
                     'postcss-loader?sourceMap'
                 ]
             }, {
-                enforce: "pre",
+                enforce: 'pre',
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: "eslint-loader"
+                loader: 'eslint-loader'
             }, {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
@@ -86,7 +87,7 @@ var config = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
         }),
-        new HtmlWebpackPlugin({inject: true, template: './public/index.html'})
+        new HtmlWebpackPlugin({ inject: true, template: './public/index.html' })
     ]
 };
 
