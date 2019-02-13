@@ -1,7 +1,7 @@
 .module {
-    color: #EA1821;
-    text-align: center;
-    font-family: Avenir, Helvetica, sans-serif;
-    text-transform: uppercase;
-    font-size: calc(48px + (120 - 48) * (100vw - 320px) / (1920 - 320));
+  color: #f969a0;
+  text-align: center;
+  font-family: Avenir, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: calc(48px + (120 - 48) * (100vw - 320px) / (1920 - 320));
 }

@@ -1,13 +1,24 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 // Style imports.
 import styles from '../css/app.module.css';
 
-export default class App extends Component {
-    render() {
-        return (
-            <h1 className={styles.module}>React</h1>
-        );
-    }
+const App = () => {
+  const [title, setTitle] = useState('Hello');
+
+  // Simplification of https://overreacted.io/making-setinterval-declarative-with-react-hooks/
+  useEffect(() => {
+    const intervalID = setInterval(() => {
+      setTitle(`React ${Math.random().toFixed(2)}`);
+    }, 1000);
+    return () => clearInterval(intervalID);
+  }, []);
+
+  useEffect(() => {
+    document.title = `The title is ${title}`;
+  }, [title]);
+
+  return <h1 className={styles.module}>{title}</h1>;
 };
+
+export default App;

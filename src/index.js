@@ -5,8 +5,7 @@ import ReactDOM from 'react-dom';
 import './css/app.css';
 
 // App Components
-import App from './components/App.js';
+import App from './components/App';
 
 // Render
-ReactDOM.render(
-    <App/>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

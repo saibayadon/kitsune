@@ -1,16 +1,18 @@
 # 🦊
 
-- Babel 7, with preset-env set to last 2 versions of Chrome, FF and Safari.
-- PostCSS (w/ CSS Modules)
-- React Router
+### Defaults
+- **Babel 7** (`preset-env` set to ">0.25%, not ie 11, not op_mini all").
+- **PostCSS** (CSS Modules + CSSNano)
+- **React** (^16.8.1 ~ React.Lazy, Suspense and React Hooks)
+- **React Router**
 
 ### How to run locally
-* `yarn install`
-* `yarn start`
+- `yarn install`
+- `yarn start`
 
 ### Build for production
-* `yarn build` -> Will output a build folder
+- `yarn build` -> Will output a build folder
 
-### Extra optimizations:
-* You can add a `Loadable` (https://github.com/thejameskyle/react-loadable) and use Dynamic Imports for code splitting (https://github.com/airbnb/babel-plugin-dynamic-import-webpack)
-* You can add an alias to `preact` by using `preact-compat` (https://github.com/developit/preact-compat)
+### Linting
+**ESLint & Prettier** (Using AirBnB defaults)
+- `yarn lint` -> Will lint all code under `src` folder.
