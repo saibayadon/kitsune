@@ -4,9 +4,12 @@ module.exports = {
     [
       '@babel/preset-env',
       {
-        targets: { browsers: ['>0.25%', 'not ie 11', 'not op_mini all'] },
-        useBuiltIns: 'usage',
-        forceAllTransforms: process.env.NODE_ENV === 'production',
+        targets: {
+          browsers: [
+            '>2%, last 1 edge version, last 2 safari version, not ie 11, not op_mini all',
+          ],
+        },
+        useBuiltIns: "usage"
       },
     ],
   ],

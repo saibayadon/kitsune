@@ -8,6 +8,7 @@ const mainPath = path.resolve(__dirname, 'src', 'index.js');
 // Webpack Plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const config = {
   entry: {
@@ -71,9 +72,6 @@ const config = {
     },
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-    }),
     new HtmlWebpackPlugin({
       inject: true,
       template: './public/index.html',
@@ -95,6 +93,7 @@ const config = {
       filename: 'css/[name].css',
       chunkFilename: 'css/[id].css',
     }),
+    new BundleAnalyzerPlugin(),
   ],
 };
 

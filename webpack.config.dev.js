@@ -84,11 +84,6 @@ const config = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(
-        process.env.NODE_ENV || 'development',
-      ),
-    }),
     new HtmlWebpackPlugin({ inject: true, template: './public/index.html' }),
   ],
 };
