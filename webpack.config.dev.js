@@ -8,6 +8,7 @@ const mainPath = resolve(__dirname, 'src', 'index.js');
 
 // Webpack Plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config = {
   entry: [
@@ -84,7 +85,13 @@ const config = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new HtmlWebpackPlugin({ inject: true, template: './public/index.html' }),
+    new CopyWebpackPlugin([
+      {
+        from: 'public/',
+        to: '[name].[ext]',
+      },
+    ]),
+    new HtmlWebpackPlugin({ inject: true, template: './src/index.html' }),
   ],
 };
 

@@ -1,5 +1,4 @@
 // Require
-const webpack = require('webpack');
 const path = require('path');
 
 const buildPath = path.resolve(__dirname, 'build');
@@ -8,6 +7,7 @@ const mainPath = path.resolve(__dirname, 'src', 'index.js');
 // Webpack Plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const config = {
@@ -72,9 +72,15 @@ const config = {
     },
   },
   plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: 'public/',
+        to: '[name].[hash:8].[ext]',
+      },
+    ]),
     new HtmlWebpackPlugin({
       inject: true,
-      template: './public/index.html',
+      template: './src/index.html',
       filename: 'index.[chunkhash:8].html',
       minify: {
         removeComments: true,

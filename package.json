@@ -3,8 +3,8 @@
   "version": "0.3.0",
   "description": "React boilerplate. Sly as a fox.",
   "scripts": {
-    "start": "mkdir -p build && rm -rf build/* && cp -R public/* build && rm build/index.html && webpack-dev-server --mode development --config webpack.config.dev.js --open",
-    "build": "mkdir -p build && rm -rf build/* && cp -R public/* build && rm build/index.html && NODE_ENV=production webpack --mode production --config webpack.config.prod.js --progress",
+    "start": "mkdir -p build && rm -rf build/* && webpack-dev-server --mode development --config webpack.config.dev.js --open",
+    "build": "mkdir -p build && rm -rf build/* && NODE_ENV=production webpack --mode production --config webpack.config.prod.js --progress",
     "lint": "node_modules/.bin/eslint ./src --max-warnings=0 --cache src"
   },
   "author": "",
@@ -22,6 +22,7 @@
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "caniuse-lite": "^1.0.30000936",
+    "copy-webpack-plugin": "^5.0.1",
     "css-loader": "^2.1.0",
     "cssnano": "^4.1.9",
     "eslint": "^5.13.0",
