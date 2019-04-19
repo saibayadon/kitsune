@@ -27,6 +27,7 @@ const config = {
   },
   output: {
     path: buildPath,
+    publicPath: '/',
     filename: 'js/bundle.js',
     chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
   },
