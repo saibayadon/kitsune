@@ -76,7 +76,7 @@ const config = {
     new CopyWebpackPlugin([
       {
         from: 'public/',
-        to: '[name].[ext]',
+        to: '[path][name].[ext]',
       },
     ]),
     new HtmlWebpackPlugin({
