@@ -21,6 +21,7 @@ const config = {
     filename: 'js/[name].[chunkhash:8].js',
     chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
   },
+  mode: 'production',
   module: {
     rules: [
       {
@@ -73,12 +74,14 @@ const config = {
     },
   },
   plugins: [
-    new CopyWebpackPlugin([
-      {
-        from: 'public/',
-        to: '[path][name].[ext]',
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'public/',
+          to: '[path][name].[ext]',
+        },
+      ],
+    }),
     new HtmlWebpackPlugin({
       inject: true,
       template: './src/index.html',

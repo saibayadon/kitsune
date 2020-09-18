@@ -31,6 +31,7 @@ const config = {
     filename: 'js/bundle.js',
     chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
   },
+  mode: 'development',
   module: {
     rules: [
       {
@@ -85,13 +86,14 @@ const config = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-    new CopyWebpackPlugin([
-      {
-        from: 'public/',
-        to: '[name].[ext]',
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'public/',
+          to: '[name].[ext]',
+        },
+      ]
+    }),
     new HtmlWebpackPlugin({ inject: true, template: './src/index.html' }),
   ],
 };

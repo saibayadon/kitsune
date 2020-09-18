@@ -9,8 +9,8 @@ const App = () => {
   // Simplification of https://overreacted.io/making-setinterval-declarative-with-react-hooks/
   useEffect(() => {
     const intervalID = setInterval(() => {
-      setTitle(`React ${Math.random().toFixed(2)}`);
-    }, 1000);
+      setTitle(`${Math.random().toFixed(2)}`);
+    }, 100);
     return () => clearInterval(intervalID);
   }, []);
 
@@ -18,7 +18,11 @@ const App = () => {
     document.title = `The title is ${title}`;
   }, [title]);
 
-  return <h1 className={styles.module}>{title}</h1>;
+  return (
+    <>
+      <h1 className={styles.module}>{title}</h1>
+    </>
+  );
 };
 
 export default App;
