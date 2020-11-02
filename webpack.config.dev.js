@@ -86,7 +86,7 @@ const config = {
       port: 3000,
       static: buildPath,
     }),
-    // new ESLintPlugin(),
+    new ESLintPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {

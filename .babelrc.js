@@ -9,7 +9,8 @@ module.exports = {
             '>2%, last 1 edge version, last 2 safari version, not ie 11, not op_mini all',
           ],
         },
-        useBuiltIns: "usage"
+        useBuiltIns: "usage",
+        corejs: "3",
       },
     ],
   ],
