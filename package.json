@@ -3,8 +3,8 @@
   "version": "0.3.0",
   "description": "React boilerplate. Sly as a fox.",
   "scripts": {
-    "start": "mkdir -p build && rm -rf build/* && webpack --mode development --config webpack.config.dev.js",
-    "build": "mkdir -p build && rm -rf build/* && NODE_ENV=production webpack --mode production --config webpack.config.prod.js --progress",
+    "start": "mkdir -p build && rm -rf build/* && webpack --config webpack.config.dev.js",
+    "build": "mkdir -p build && rm -rf build/* && NODE_ENV=production webpack --config webpack.config.prod.js --progress",
     "lint": "node_modules/.bin/eslint ./src --max-warnings=0 --cache src"
   },
   "author": "",

@@ -10,13 +10,12 @@ module.exports = {
           ],
         },
         useBuiltIns: "usage",
-        corejs: "3",
+        corejs: '^3.0.0',
       },
     ],
   ],
   plugins: [
-    'dynamic-import-webpack',
-    'transform-class-properties',
+    '@babel/plugin-proposal-class-properties',
     '@babel/plugin-proposal-object-rest-spread',
   ],
 };

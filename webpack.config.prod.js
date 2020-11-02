@@ -11,6 +11,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const config = {
+  mode: 'production',
   entry: {
     main: mainPath,
     vendor: ['react', 'react-dom'],

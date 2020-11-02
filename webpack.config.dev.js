@@ -13,6 +13,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const { WebpackPluginServe } = require('webpack-plugin-serve');
 
 const config = {
+  mode: 'development',
   entry: [
     'webpack/hot/only-dev-server',
     mainPath,
