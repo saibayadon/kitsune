@@ -58,11 +58,7 @@ const config = {
       },
       {
         exclude: [/\.html$/, /\.(js|jsx)$/, /\.css$/, /\.json$/],
-        loader: 'url-loader',
-        options: {
-          limit: 2000,
-          name: 'assets/[hash:8].[ext]',
-        },
+        type: 'asset/resource',
       },
     ],
   },
@@ -73,12 +69,14 @@ const config = {
     },
   },
   plugins: [
-    new CopyWebpackPlugin([
-      {
-        from: 'public/',
-        to: '[name].[ext]',
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'public/',
+          to: '[name].[ext]',
+        },
+      ],
+    }),
     new HtmlWebpackPlugin({
       inject: true,
       template: './src/index.html',
