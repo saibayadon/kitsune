@@ -14,20 +14,8 @@ const { WebpackPluginServe } = require('webpack-plugin-serve');
 
 const config = {
   mode: 'development',
-  entry: [
-    'webpack/hot/only-dev-server',
-    mainPath,
-    'webpack-plugin-serve/client',
-  ],
+  entry: [mainPath, 'webpack-plugin-serve/client'],
   devtool: 'inline-source-map',
-  devServer: {
-    hot: true,
-    contentBase: resolve(__dirname, 'build'),
-    inline: true,
-    publicPath: '/',
-    port: 8080,
-    historyApiFallback: true,
-  },
   output: {
     path: buildPath,
     publicPath: '/',
