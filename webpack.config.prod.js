@@ -14,7 +14,6 @@ const config = {
   mode: 'production',
   entry: {
     main: mainPath,
-    vendor: ['react', 'react-dom'],
   },
   output: {
     path: buildPath,
