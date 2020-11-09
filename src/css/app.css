@@ -1,8 +1,11 @@
-@import 'normalize.css';
+@import 'modern-css-reset';
 
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+
+  padding-block: 20px;
+  padding-inline: 20px;
 }

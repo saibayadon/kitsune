@@ -22,9 +22,6 @@ const config = {
     filename: 'js/bundle.js',
     chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
   },
-  optimization: {
-    chunkIds: 'named',
-  },
   module: {
     rules: [
       {
