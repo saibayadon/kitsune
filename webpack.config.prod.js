@@ -57,7 +57,7 @@ const config = {
         loader: 'babel-loader',
       },
       {
-        exclude: [/\.html$/, /\.(js|jsx)$/, /\.css$/, /\.json$/],
+        exclude: [/(^|\.(svg|css|json|js|jsx|ts|tsx|html))$/],
         type: 'asset/resource',
       },
     ],

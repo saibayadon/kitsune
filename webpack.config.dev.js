@@ -36,7 +36,7 @@ const config = {
               sourceMap: true,
             },
           },
-          'postcss-loader?sourceMap',
+          'postcss-loader',
         ],
       },
       {
@@ -51,7 +51,7 @@ const config = {
               sourceMap: true,
             },
           },
-          'postcss-loader?sourceMap',
+          'postcss-loader',
         ],
       },
       {
@@ -62,7 +62,7 @@ const config = {
         },
       },
       {
-        exclude: [/\.html$/, /\.(js|jsx)$/, /\.css$/, /\.json$/],
+        exclude: [/(^|\.(svg|css|json|js|jsx|ts|tsx|html))$/],
         type: 'asset/inline',
       },
     ],

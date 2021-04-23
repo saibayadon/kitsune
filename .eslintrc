@@ -4,7 +4,6 @@
     "prettier",
     "plugin:prettier/recommended",
     "plugin:import/errors",
-    "prettier/react"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
