@@ -6,7 +6,7 @@ module.exports = {
       {
         targets: {
           browsers: [
-            '>2%, last 1 edge version, last 2 safari version, not ie 11, not op_mini all',
+            '>2%, Firefox ESR, not dead',
           ],
         },
         useBuiltIns: "usage",
