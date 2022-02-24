@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 // Style imports.
 import styles from '../css/app.module.css';
 
-const App = () => {
+const App = function () {
   const [title, setTitle] = useState('Hello');
 
   // Simplification of https://overreacted.io/making-setinterval-declarative-with-react-hooks/
