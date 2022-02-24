@@ -4,7 +4,7 @@ process.traceDeprecation = true;
 const { resolve } = require('path');
 
 const buildPath = resolve(__dirname, 'build');
-const mainPath = resolve(__dirname, 'src', 'index.js');
+const mainPath = resolve(__dirname, 'src', 'index.jsx');
 
 // Webpack Plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -21,6 +21,9 @@ const config = {
     publicPath: '/',
     filename: 'js/bundle.js',
     chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json', '.wasm'],
   },
   module: {
     rules: [
@@ -55,7 +58,7 @@ const config = {
         ],
       },
       {
-        test: /\.js$/,
+        test: /\.js(x)?$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',

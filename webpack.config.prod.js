@@ -2,7 +2,7 @@
 const path = require('path');
 
 const buildPath = path.resolve(__dirname, 'build');
-const mainPath = path.resolve(__dirname, 'src', 'index.js');
+const mainPath = path.resolve(__dirname, 'src', 'index.jsx');
 
 // Webpack Plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -20,6 +20,9 @@ const config = {
     publicPath: '/',
     filename: 'js/[name].[chunkhash:8].js',
     chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json', '.wasm'],
   },
   module: {
     rules: [
@@ -52,7 +55,7 @@ const config = {
         ],
       },
       {
-        test: /\.js$/,
+        test: /\.js(x)?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
       },

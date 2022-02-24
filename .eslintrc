@@ -26,7 +26,6 @@
     "func-style": [2, "expression", { "allowArrowFunctions": true }],
     "jsx-a11y/href-no-hash": 0,
     "jsx-a11y/anchor-is-valid": [1, { "aspects": ["invalidHref"] }],
-    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
     "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
     "react/prop-types": 0,
     "react/no-unused-prop-types": 0,
