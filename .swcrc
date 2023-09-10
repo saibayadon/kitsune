@@ -1,0 +1,26 @@
+{
+  "env": {
+    "targets": ">2%, Firefox ESR, not dead"
+  },
+  "minify": true,
+  "jsc": {
+    "parser": {
+      "syntax": "ecmascript",
+      "jsx": true,
+    },
+    "transform": {
+      "react": {
+        "pragma": "React.createElement",
+        "pragmaFrag": "React.Fragment",
+        "throwIfNamespace": true
+      },
+      "optimizer": {
+        "globals": {
+          "vars": {
+            "__DEBUG__": "true"
+          }
+        }
+      }
+    }
+  }
+}

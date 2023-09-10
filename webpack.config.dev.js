@@ -61,7 +61,7 @@ const config = {
         test: /\.js(x)?$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: 'swc-loader',
         },
       },
       {
