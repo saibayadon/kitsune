@@ -2,9 +2,8 @@
   "extends": [
     "airbnb",
     "plugin:prettier/recommended",
-    "plugin:import/errors",
+    "plugin:import/errors"
   ],
-  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
@@ -18,7 +17,7 @@
     "browser": true,
     "node": true
   },
-  "plugins": ["babel", "react", "prettier"],
+  "plugins": ["react", "prettier"],
   "rules": {
     "strict": [0, "global"],
     "func-names": [2, "never"],

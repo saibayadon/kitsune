@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 // Global Styles
 import './css/app.css';
@@ -8,4 +8,7 @@ import './css/app.css';
 import App from './components/App';
 
 // Render
-ReactDOM.render(<App />, document.getElementById('root'));
+// Render
+const domNode = document.getElementById('root');
+const root = createRoot(domNode);
+root.render(<App />);
