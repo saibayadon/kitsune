@@ -6,8 +6,13 @@
   "jsc": {
     "parser": {
       "syntax": "ecmascript",
-      "jsx": true,
+      "jsx": true
+
     },
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "baseUrl": ".",
     "transform": {
       "react": {
         "pragma": "React.createElement",

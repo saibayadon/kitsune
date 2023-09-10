@@ -9,7 +9,7 @@ For a more robust setup check out something like https://astro.build/ or https:/
 - **React Router**
 
 ### How to run locally
-- `bun run install`
+- `bun install`
 - `bun run start`
 
 ### Build for production

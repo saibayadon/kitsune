@@ -12,6 +12,14 @@
       "jsx": true
     }
   },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["@/*", "./src"]],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
   "env": {
     "es6": true,
     "browser": true,

@@ -2,12 +2,11 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 
 // Global Styles
-import './css/app.css';
+import '@/css/app.css';
 
 // App Components
-import App from './components/App';
+import App from '@/components/App';
 
-// Render
 // Render
 const domNode = document.getElementById('root');
 const root = createRoot(domNode);
