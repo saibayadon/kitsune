@@ -31,7 +31,7 @@
     "install-peers": "^1.0.4",
     "mini-css-extract-plugin": "^2.7.6",
     "npm-run-parallel": "^0.6.0",
-    "postcss": "^8.4.29",
+    "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.3.3",
     "postcss-logical": "^7.0.0",
