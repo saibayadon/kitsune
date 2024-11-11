@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
-// Style imports.
-import styles from '@/css/app.module.css';
+import { useEffect, useState } from 'react';
+import styles from '../css/app.module.css';
 
 const App = function () {
   const [title, setTitle] = useState('Hello');
