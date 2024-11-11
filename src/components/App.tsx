@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from '../css/app.module.css';
+import logo from '@assets/react.svg';
 
 const App = function () {
   const [title, setTitle] = useState('Hello');
@@ -16,7 +16,10 @@ const App = function () {
     document.title = `The title is ${title}`;
   }, [title]);
 
-  return <h1 className={styles.module}>{title}</h1>;
+  return (<main className="flex flex-col items-center justify-center h-screen">
+    <h1 className="text-8xl font-bold text-pink-300 uppercase font-mono text-center">{title}</h1>
+    <img src={logo} alt="React logo" className="w-24 h-24 m-5 rounded-full" />
+  </main>);
 };
 
 export default App;

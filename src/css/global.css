@@ -1,4 +1,6 @@
-@import 'modern-css-reset';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   display: flex;

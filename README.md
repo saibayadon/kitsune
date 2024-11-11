@@ -5,6 +5,7 @@ No frills, super basic, vanilla React boilerplate.
 - **Vite**
 - **React** (^18.3.0)
 - Typescript 5.6.2
+- Tailwind CSS
 - Aliases for `@`, `@assets` and `@components`
 
 ### How to run locally
